@@ -3,7 +3,9 @@ package com.del.app;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -11,27 +13,29 @@ public class PersonOperation {
 
 	public static void main(String[] args) {
 		
-		List<Person> personList = new ArrayList<>();
+		Set<Person> personList = new HashSet<>();
 		
 		Person p1 = new Person("Rohit", 25, "rohit@yahoo.com",45600);
 		Person p2 = new Person("Shreya", 23, "shreya@yahoo.com",38200);
 		Person p3 = new Person("Manoj", 24, "manoj@yahoo.com",36500);
 		Person p4 = new Person("Priya", 25, "priya@yahoo.com",45300);
 		Person p5 = new Person("Javed", 28, "javed@yahoo.com",62800);
+		Person p6 = new Person("Javed", 28, "javed@yahoo.com",62800);
 		
 		personList.add(p1);
 		personList.add(p2);
 		personList.add(p3);
 		personList.add(p4);
 		personList.add(p5);
+		personList.add(p6);
 		
-		Collections.sort(personList);
+//		Collections.sort(personList);
 		
 	//	List<Person> pList = Arrays.asList(p1,p2,p3,p4,p5);
 		
-//		for(Person p : personList) {
-//			System.out.println(p);
-//		}
+		for(Person p : personList) {
+			System.out.println(p);
+		}
 		
 //		System.out.println("Original List");
 //		personList.forEach(p -> System.out.println(p));
@@ -94,12 +98,12 @@ public class PersonOperation {
 //		
 //		System.out.println(sum);
 		
-		personList.stream().sorted((per1,per2)->per1.getPersonName().compareTo(per2.getPersonName()));
-		
-		
-		Person p = personList.stream().max((per1,per2)->per1.getAge()-per2.getAge()).get();
-		
-		System.out.println(p);
+//		personList.stream().sorted((per1,per2)->per1.getPersonName().compareTo(per2.getPersonName()));
+//		
+//		
+//		Person p = personList.stream().max((per1,per2)->per1.getAge()-per2.getAge()).get();
+//		
+//		System.out.println(p);
 		
 	}
 
