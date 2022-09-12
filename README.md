@@ -120,3 +120,41 @@ https://www.hackerrank.com/domains/java
 * RDBMS - Operators, Aggregate, String, Date Functions		https://www.geeksforgeeks.org/sql-tutorial/
 * Web Basics - Learn the basics of HTML5 & CSS3		https://www.w3schools.com/html/
 * JavaScript - Learn the basics of Javascript		https://www.javatpoint.com/javascript-tutorial![image](https://user-images.githubusercontent.com/42864715/172369342-f5a11d3a-15fe-46da-9253-4ef28c976f30.png)
+
+```text
+
+Object class methods :
+-------------------------
+String toString()
+boolean equals()
+int hashCode()
+
+
+Collection Framework
+-------------------------
+Limitations of Arrays -
+
+* Fixed size
+* Items can not be removed
+* Accessing through index only
+* no well define algorithms are present
+
+Collection Framework
+--------------------
+API - Application Programming Interface
+Consists of different interfaces and classes
+
+
+Layered Architecture
+----------------------
+
+Presentation Layer - For interactiong with clients
+
+Business Layer - Business Logic and service classes
+
+Persistence Layer - DAO (Data Access Object) contains storage logic
+
+Database - Conatins the database
+
+
+```
