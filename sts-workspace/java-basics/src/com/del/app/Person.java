@@ -1,6 +1,6 @@
 package com.del.app;
 
-public class Person {
+public class Person implements Comparable<Person> {
 	private String personName;
 	private int age;
 	private String email;
@@ -60,6 +60,11 @@ public class Person {
 
 
 
+	
+	public int compareTo(Person p) {
+		return (int)(this.salary-p.salary);
+		
+	}
 	
 	
 	
