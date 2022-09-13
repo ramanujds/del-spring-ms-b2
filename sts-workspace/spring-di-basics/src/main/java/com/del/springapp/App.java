@@ -12,9 +12,9 @@ public class App {
 		// ApplicationContext
 		
 		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-		Laptop myLaptop = context.getBean("macbook",Laptop.class); 
-		InternetConnection conn = context.getBean("jio4G",InternetConnection.class);
+		Laptop myLaptop = context.getBean(Laptop.class); 
 		myLaptop.joinMeeting();
+		myLaptop.printDetails();
 		
 		
 		
