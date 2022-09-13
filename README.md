@@ -239,13 +239,22 @@ Employee
 	empName : String
 	skills: List<String>
 	phone: Phone
+	connectEmployee(){
+		phone.call();
+	}
 
 Phone
 	brand: String
      	sim:Sim
+	call(){
+		sim.call();
+	}
 
 Sim
 	phoneNo:long
+	call(){
+	...
+	}
 
 
 Create 3 Employees having
