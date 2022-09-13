@@ -158,3 +158,27 @@ Database - Conatins the database
 
 
 ```
+
+### Spring Framework
+
+```text
+
+Employee
+	id : int
+	empName : String
+	skills: List<String>
+	phone: Phone
+
+Phone
+	brand: String
+     	sim:Sim
+
+Sim
+	phoneNo:long
+
+
+Create 3 Employees having
+	different Phones and Sims 
+
+
+```
