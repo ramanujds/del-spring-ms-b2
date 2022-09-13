@@ -163,6 +163,77 @@ Database - Conatins the database
 
 ```text
 
+Topic for today
+---------------
+
+Spring Core
+Maven
+
+JDBC
+MySQL 
+
+JUnit
+
+Maven-
+Build Tool
+- Dependency Management
+- Standard Project Structures
+
+
+Dependency
+------------
+Laptop
+Internet Connection
+
+
+----------------
+class Laptop{
+	InternetConnection connection = new InternetConnection();
+	public void joinMeeting(){
+		connection.connect();
+	}
+}
+
+class InternetConnection{
+	public void connect(){
+		System.out.println("Connected to Internet, Joining meeting");
+	}
+}		
+
+
+class App{
+	main(....){
+		Laptop laptop = new Laptop();
+		laptop.joinMeeting();
+	}
+}
+
+
+
+
+
+
+Spring Dependency Injection
+----------------------------
+
+XML Approach
+Annotation Approach
+Java Approach
+
+
+Dependency Injection
+-----------------------
+Setter Injection
+Constructor Injection
+Autowiring
+
+Types of Autowiring
+-------------------
+byType
+byName
+byConstructor
+
+
 Employee
 	id : int
 	empName : String
@@ -179,6 +250,40 @@ Sim
 
 Create 3 Employees having
 	different Phones and Sims 
+     
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ```
