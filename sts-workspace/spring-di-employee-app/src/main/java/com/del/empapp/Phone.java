@@ -6,11 +6,21 @@ public class Phone {
 	
 	private String brand;
 	
+	
+	
+	public void setSim(Sim sim) {
+		this.sim = sim;
+	}
+
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
+
 	public void call() {
 		sim.call();
 	}
 	
-	public void showBand() {
+	public void showBrand() {
 		System.out.println("Brand : "+brand);
 	}
 
