@@ -1,7 +1,12 @@
 package com.del.empapp;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Sim {
 
+	@Value("${sim.phoneNo}")
 	private long phoneNo;
 	
 	public void setPhoneNo(long phoneNo) {

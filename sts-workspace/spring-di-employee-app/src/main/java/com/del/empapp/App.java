@@ -7,7 +7,8 @@ public class App {
 
 	public static void main(String[] args) {
 		 
-		ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+		ApplicationContext context = 
+				new AnnotationConfigApplicationContext(AppConfig.class);
 		
 		Employee emp = context.getBean(Employee.class);
 		
