@@ -3,14 +3,21 @@ package com.del.traineeapp.ui;
 import java.time.LocalDate;
 import java.util.Scanner;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import com.del.traineeapp.model.Trainee;
 import com.del.traineeapp.service.TraineeService;
 import com.del.traineeapp.service.TraineeServiceImpl;
 
+@Component
 public class TraineeAppUI {
 	
-	Scanner scan = new Scanner(System.in);
-	private TraineeService service=new TraineeServiceImpl();
+	@Autowired
+	Scanner scan;
+	
+	@Autowired
+	private TraineeService service;
 
 	public void addTrainee() {
 		// Read trainee details from user

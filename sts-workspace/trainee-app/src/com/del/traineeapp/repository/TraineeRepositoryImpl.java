@@ -3,8 +3,11 @@ package com.del.traineeapp.repository;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import com.del.traineeapp.model.Trainee;
 
+@Component
 public class TraineeRepositoryImpl implements TraineeRepository {
 	
 	private List<Trainee> traineeList = new ArrayList<>();

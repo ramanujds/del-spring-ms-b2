@@ -2,7 +2,10 @@ package com.del.traineeapp.repository;
 
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import com.del.traineeapp.model.Trainee;
+
 
 public class TraineeRepositoryJdbcImpl implements TraineeRepository {
 
