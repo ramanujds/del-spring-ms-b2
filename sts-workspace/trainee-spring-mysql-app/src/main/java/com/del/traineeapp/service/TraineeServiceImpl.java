@@ -3,13 +3,18 @@ package com.del.traineeapp.service;
 import java.sql.SQLException;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.del.traineeapp.model.Trainee;
 import com.del.traineeapp.repository.TraineeRepository;
 import com.del.traineeapp.repository.TraineeRepositoryJdbcImpl;
 
+@Service
 public class TraineeServiceImpl implements TraineeService {
 
-	private TraineeRepository repo = new TraineeRepositoryJdbcImpl();
+	@Autowired
+	private TraineeRepository repo;
 
 	@Override
 	public Trainee addTrainee(Trainee trainee)throws SQLException {

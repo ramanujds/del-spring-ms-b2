@@ -10,9 +10,22 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Repository;
+
 import com.del.traineeapp.model.Trainee;
 
+//@Repository
 public class TraineeRepositoryJdbcImpl implements TraineeRepository {
+	
+	@Value("${url}")
+	String url;
+	
+	@Value("${username}")
+	String username;
+	
+	@Value("${password}")
+	String password;
 
 	private Connection conn;
 	private PreparedStatement psmt;
@@ -31,7 +44,7 @@ public class TraineeRepositoryJdbcImpl implements TraineeRepository {
 	 */
 
 	public void connectDb() throws SQLException {
-		conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/deloitte_db", "root", "password");
+		conn = DriverManager.getConnection(url,username,password);
 	}
 
 	@Override
