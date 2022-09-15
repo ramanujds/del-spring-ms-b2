@@ -5,10 +5,11 @@ import java.util.List;
 
 import com.del.traineeapp.model.Trainee;
 import com.del.traineeapp.repository.TraineeRepository;
+import com.del.traineeapp.repository.TraineeRepositoryJdbcImpl;
 
 public class TraineeServiceImpl implements TraineeService {
 
-	private TraineeRepository repo;
+	private TraineeRepository repo = new TraineeRepositoryJdbcImpl();
 
 	@Override
 	public Trainee addTrainee(Trainee trainee)throws SQLException {
