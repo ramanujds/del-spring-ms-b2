@@ -17,6 +17,18 @@ public class TraineeRepositoryJdbcImpl implements TraineeRepository {
 	private Connection conn;
 	private PreparedStatement psmt;
 	private ResultSet queryResult;
+	
+	/*
+	 * 
+	 * SQL Queries
+	 * 
+	 * create database deloitte_db;
+	 * use deloitte_db;
+	 * create table trainee(id numeric(5), trainee_name varchar(50), join_date date);
+	 * 
+	 * 
+	 * 
+	 */
 
 	public void connectDb() throws SQLException {
 		conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/deloitte_db", "root", "password");
