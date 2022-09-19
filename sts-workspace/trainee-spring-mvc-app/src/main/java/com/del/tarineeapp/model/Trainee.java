@@ -25,7 +25,7 @@ public class Trainee {
 		return traineeId;
 	}
 
-	public void setTreaineeId(int traineeId) {
+	public void setTraineeId(int traineeId) {
 		this.traineeId = traineeId;
 	}
 

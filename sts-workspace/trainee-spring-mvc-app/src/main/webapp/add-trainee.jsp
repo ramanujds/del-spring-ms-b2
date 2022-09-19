@@ -22,6 +22,18 @@
 
 
 	</form>
+	
+	<div>
+	<form action="search" method="get">
+		
+		<label>Trainee Id</label> <input type="number" name=traineeId>
+		
+
+		<button type="submit">Search</button>
+
+
+	</form>
+	</div>
 
 </body>
 </html>
