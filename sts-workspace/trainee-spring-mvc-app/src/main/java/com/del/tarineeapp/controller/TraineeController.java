@@ -66,4 +66,10 @@ public class TraineeController {
 		return "show-all.jsp";
 	}
 	
+	@GetMapping("/delete")
+	public String deleteTrainee(@RequestParam("traineeId") int traineeId) {
+		service.deleteTrainee(traineeId);
+		return "show-all";
+	}
+	
 }
