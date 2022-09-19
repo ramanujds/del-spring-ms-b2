@@ -9,7 +9,6 @@
 
 <h1>Hello ${username}.. Welcome to Spring MVC</h1>
 
-<h1>Hello <%=request.getAttribute("username")%>.. Welcome to Spring MVC</h1>
 
 </body>
 </html>
