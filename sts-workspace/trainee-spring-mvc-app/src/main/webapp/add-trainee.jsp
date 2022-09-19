@@ -22,17 +22,17 @@
 
 
 	</form>
-	
+
 	<div>
-	<form action="search" method="get">
-		
-		<label>Trainee Id</label> <input type="number" name=traineeId>
-		
+		<form action="search" method="get">
 
-		<button type="submit">Search</button>
+			<label>Trainee Id</label> <input type="number" name=traineeId>
 
 
-	</form>
+			<button type="submit">Search</button>
+
+
+		</form>
 	</div>
 
 </body>

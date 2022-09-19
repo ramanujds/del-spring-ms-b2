@@ -1,6 +1,7 @@
 package com.del.tarineeapp.controller;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -56,6 +57,13 @@ public class TraineeController {
 		m.addAttribute("trainee", trainee);
 		return "show-trainee.jsp";
 		
+	}
+	
+	@GetMapping("/show-all")
+	public String showAllTrainees(Model m) {
+		List<Trainee> trainees = service.getAllTrainees();
+		m.addAttribute("trainees", trainees);
+		return "show-all.jsp";
 	}
 	
 }
