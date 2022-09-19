@@ -53,3 +53,7 @@ once a week for 1 hour and chooses to do one activity per day.**
 **Sample Output:**
 
     Weight lost by Anne in a month is : 5.0 pounds
+    
+## Spring MVC Exercise
+
+Create a form to read employee details (id, name and salary) and populate it on a JSP Page
