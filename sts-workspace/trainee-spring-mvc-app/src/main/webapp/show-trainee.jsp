@@ -5,9 +5,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Trainee Details</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<jsp:include page="header.jsp"></jsp:include>
 <h2>Trainee Details</h2>
 
 <p>Trainee ID : ${trainee.traineeId}</p>

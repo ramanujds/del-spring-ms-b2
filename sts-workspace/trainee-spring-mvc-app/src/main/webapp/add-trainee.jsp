@@ -4,8 +4,12 @@
 <html>
 <head>
 <title>Add Trainee</title>
+<link rel="stylesheet" href="style.css">
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>
 <body>
+<jsp:include page="header.jsp"></jsp:include>
 
 	<form action="register" method="post">
 		<div>
@@ -23,17 +27,7 @@
 
 	</form>
 
-	<div>
-		<form action="search" method="get">
 
-			<label>Trainee Id</label> <input type="number" name=traineeId>
-
-
-			<button type="submit">Search</button>
-
-
-		</form>
-	</div>
 
 </body>
 </html>
