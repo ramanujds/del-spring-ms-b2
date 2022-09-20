@@ -79,4 +79,8 @@ Search an Item by Name
 Display all the available items
 Filter items category wise
 
+Hints:
+Create enums for status and category
+use @Enumerated for fields of enum types
+
 ```
