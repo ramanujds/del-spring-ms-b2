@@ -36,9 +36,12 @@
 				out.println("<td>"+t.getTraineeId()+"</td>");
 				out.println("<td>"+t.getTraineeName()+"</td>");
 				out.println("<td>"+t.getJoinDate()+"</td>");
-				out.println("<td><a href=delete?traineeId="+t.getTraineeId()+">Delete</a></td>"); 
+				out.println("<td><form onsubmit='return deleteTrainee()' action=delete method=get><input type=hidden name=traineeId value='"+t.getTraineeId()+
+						"'><button class='btn btn-danger' type=submit>Delete</button></form></td>"); 
 				
-				out.println("<td><a href=update?traineeId="+t.getTraineeId()+">Update</a></td>"); 
+				
+				out.println("<td><form action=update method=get><input type=hidden name=traineeId value='"+t.getTraineeId()+
+								"'><button class='btn btn-primary' type=submit>Update</button></form></td>"); 
 				
 				out.println("</tr>");
 			}
@@ -50,4 +53,11 @@
 	
 
 </body>
+<script type="text/javascript">
+
+function deleteTrainee() {
+	
+	return confirm("Sure to delete?");
+}
+</script>
 </html>
