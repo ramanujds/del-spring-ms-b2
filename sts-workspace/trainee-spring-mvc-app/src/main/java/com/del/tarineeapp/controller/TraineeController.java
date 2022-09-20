@@ -45,7 +45,7 @@ public class TraineeController {
 	public String addTrainee(@ModelAttribute("trainee") Trainee trainee) {
 		
 		// Write code to call the the service method
-		
+		System.out.println("Add Trainee From Controller Called");
 		service.addTrainee(trainee);
 		
 		return "show-trainee.jsp";

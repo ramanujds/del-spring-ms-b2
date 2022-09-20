@@ -2,13 +2,26 @@ package com.del.tarineeapp.model;
 
 import java.time.LocalDate;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import org.springframework.format.annotation.DateTimeFormat;
 
+@Entity
+@Table(name = "trainee_db")
 public class Trainee {
 	
+	@Id
+	@Column(name = "trainee_id")
 	private int traineeId;
+	
+	@Column(length = 50, nullable = false, name = "trainee_name")
 	private String traineeName;
+	
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	@Column(name="join_date")
 	private LocalDate joinDate;
 	
 	public Trainee() {

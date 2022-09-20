@@ -3,7 +3,9 @@ package com.del.tarineeapp.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.del.tarineeapp.model.Trainee;
 import com.del.tarineeapp.repository.TraineeRepository;
@@ -12,24 +14,25 @@ import com.del.tarineeapp.repository.TraineeRepository;
 public class TraineeServiceImpl implements TraineeService{
 	
 	@Autowired
+	@Qualifier("trainee_jpa_repo")
 	private TraineeRepository repo;
 
-	@Override
+	@Transactional
 	public Trainee addTrainee(Trainee trainee) {
 		return repo.addTrainee(trainee);
 	}
 
-	@Override
+	
 	public Trainee searchTrainee(int traineeId) {
 		return repo.getTrainee(traineeId);
 	}
 
-	@Override
+	
 	public List<Trainee> getAllTrainees() {
 		return repo.getAllTrainees();
 	}
 
-	@Override
+	@Transactional
 	public boolean deleteTrainee(int traineeId) {
 		return repo.deleteTrainee(traineeId);
 	}
