@@ -25,7 +25,7 @@
 				<th>ID</th>
 				<th>Name</th>
 				<th>Date Joined</th>
-				<th>Delete</th>
+				<th colspan="2">Delete/Update</th>
 			</tr>
 		</thead>
 
@@ -36,7 +36,10 @@
 				out.println("<td>"+t.getTraineeId()+"</td>");
 				out.println("<td>"+t.getTraineeName()+"</td>");
 				out.println("<td>"+t.getJoinDate()+"</td>");
-				out.println("<td><a href=delete?traineeId="+t.getTraineeId()+">Delete</a></td>");
+				out.println("<td><a href=delete?traineeId="+t.getTraineeId()+">Delete</a></td>"); 
+				
+				out.println("<td><a href=update?traineeId="+t.getTraineeId()+">Update</a></td>"); 
+				
 				out.println("</tr>");
 			}
 		%>

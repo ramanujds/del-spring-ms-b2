@@ -40,6 +40,28 @@ public class TraineeRepositoryJpaImpl implements TraineeRepository {
 		return true;
 	}
 	
+	@Override
+	public Trainee updateTrainee(Trainee trainee) {
+		
+		Trainee oldTrainee = getTrainee(trainee.getTraineeId());
+		oldTrainee.setTraineeName(trainee.getTraineeName());
+		oldTrainee.setJoinDate(trainee.getJoinDate());
+		return trainee;
+		
+	}
+	
+	 @Override
+	public Trainee getTraineeByName(String traineeName) {
+		
+		 Query findByName = emgr.createQuery("from Trainee where traineeName=:tname");
+		 findByName.setParameter("tname", traineeName);
+		 
+		 Trainee trainee = (Trainee) findByName.getSingleResult();
+		 
+		 return trainee;
+		 
+	}
+	
 	
 
 }

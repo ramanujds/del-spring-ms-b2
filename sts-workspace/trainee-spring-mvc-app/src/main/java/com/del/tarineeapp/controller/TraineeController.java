@@ -45,7 +45,7 @@ public class TraineeController {
 	public String addTrainee(@ModelAttribute("trainee") Trainee trainee) {
 		
 		// Write code to call the the service method
-		System.out.println("Add Trainee From Controller Called");
+	
 		service.addTrainee(trainee);
 		
 		return "show-trainee.jsp";
@@ -70,6 +70,21 @@ public class TraineeController {
 	public String deleteTrainee(@RequestParam("traineeId") int traineeId) {
 		service.deleteTrainee(traineeId);
 		return "show-all";
+	}
+	
+	@GetMapping("/update")
+	public String loadUpdateTraineeForm(@RequestParam("traineeId") int traineeId, Model m) {
+		Trainee trainee = service.searchTrainee(traineeId);
+		m.addAttribute("trainee", trainee);
+		return "update-trainee.jsp";
+	}
+	
+	@PostMapping("/update")
+	public String updateTrainee(@ModelAttribute Trainee trainee, Model m) {
+		
+		Trainee updatedTrainee = service.updateTrainee(trainee);
+		m.addAttribute("trainee", updatedTrainee);
+		return "show-trainee.jsp";
 	}
 	
 }

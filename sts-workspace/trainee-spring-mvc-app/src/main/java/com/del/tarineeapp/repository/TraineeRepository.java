@@ -14,5 +14,9 @@ public interface TraineeRepository {
 	
 	public boolean deleteTrainee(int traineeId);
 	
+	public Trainee updateTrainee(Trainee trainee);
+	
+	public Trainee getTraineeByName(String traineeName);
+	
 	
 }

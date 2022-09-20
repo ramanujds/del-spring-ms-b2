@@ -14,4 +14,6 @@ public interface TraineeService {
 	
 	public boolean deleteTrainee(int traineeId);
 	
+	public Trainee updateTrainee(Trainee trainee);
+	
 }

@@ -39,6 +39,17 @@ public class TraineeRepositoryImpl implements TraineeRepository {
 		return traineeList.remove(trainee);
 	}
 	
+	 @Override
+	public Trainee getTraineeByName(String traineeName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	 
+	 @Override
+	public Trainee updateTrainee(Trainee trainee) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 
 }

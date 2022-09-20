@@ -36,5 +36,11 @@ public class TraineeServiceImpl implements TraineeService{
 	public boolean deleteTrainee(int traineeId) {
 		return repo.deleteTrainee(traineeId);
 	}
+	
+
+	@Transactional
+	public Trainee updateTrainee(Trainee trainee) {
+		return repo.updateTrainee(trainee);
+	}
  
 }
