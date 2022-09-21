@@ -56,4 +56,31 @@ once a week for 1 hour and chooses to do one activity per day.**
     
 ## Spring MVC Exercise
 
-Create a form to read employee details (id, name and salary) and populate it on a JSP Page
+```text
+
+Food Ordering App
+
+Develop a Food Ordering App using Spring Boot. Refer to the class diagram below to develop required classes.
+You can use either MySQL or an embedded H2 Database to store the data.
+
+MenuItem
+	- menuItemId:long
+	- itemName:String
+	- status:(available/not-available)
+	- price:double
+	- category (Veg/Nonveg)
+
+Implement the following operations
+
+Add a new item to the menu
+Delete an item from the menu
+Update the price of an item
+Search an Item by Name
+Display all the available items
+Filter items category wise
+
+Hints:
+Create enums for status and category
+use @Enumerated for fields of enum types
+
+```
