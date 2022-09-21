@@ -4,6 +4,7 @@ import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Enumerated;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -18,11 +19,17 @@ public class Trainee {
 	private int traineeId;
 	
 	@Column(length = 50, nullable = false, name = "trainee_name")
+	
 	private String traineeName;
 	
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	@Column(name="join_date")
 	private LocalDate joinDate;
+	
+//	@Enumerated
+//	private AvailabilityStatus status;
+	
+	
 	
 	public Trainee() {
 		// TODO Auto-generated constructor stub
