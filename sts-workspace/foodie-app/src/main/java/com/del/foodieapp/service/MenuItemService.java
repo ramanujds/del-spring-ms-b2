@@ -16,5 +16,9 @@ public interface MenuItemService {
 	
 	public void deleteItem(long itemCode);
 	
+	public MenuItem findItemByName(String itemName);
+	
+	public List<MenuItem> findItemsByCategory(String category);
+	
 	
 }
