@@ -4,6 +4,7 @@ package com.del.foodieapp.model;
 import javax.persistence.Entity;
 import javax.persistence.Enumerated;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 
 import lombok.Data;
 
@@ -19,5 +20,7 @@ public class MenuItem {
 	private float price;
 	@Enumerated
 	private ItemCategory category;
+	@Transient
+	private Recipe recipe;
 	
 }
