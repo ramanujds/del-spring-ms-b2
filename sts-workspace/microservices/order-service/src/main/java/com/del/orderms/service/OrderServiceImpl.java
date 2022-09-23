@@ -1,5 +1,7 @@
 package com.del.orderms.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -10,10 +12,14 @@ import com.del.orderms.model.Product;
 @Service
 public class OrderServiceImpl implements OrderService {
 	
-	private final String COUPON_SERVICE_URL="http://localhost:5200/coupons/";
-	private final String PRODUCT_SERVICE_URL="http://localhost:5100/products/";
+	@Value("${COUPON_SERVICE_URL}")
+	private String COUPON_SERVICE_URL;
 	
-	RestTemplate restClient = new RestTemplate();
+	@Value("${PRODUCT_SERVICE_URL}")
+	private String PRODUCT_SERVICE_URL;
+	
+	@Autowired
+	RestTemplate restClient;
 
 	@Override
 	public OrderDetails getOrderDetails(String productId, String couponCode) {
