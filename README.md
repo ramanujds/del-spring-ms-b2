@@ -262,14 +262,41 @@ Create 3 Employees having
      
 
 	
+### Apache Maven Location
+
+.m2/repository/javax/servlet/servlet-api
 
 
 
+## Microservices
+### coupon-service
 
 
+### product-service
 
 
+### order-service
 
+```text
+
+Service Registration :
+----------------------
+1. Created an Eureka-Server
+2. Start the server on port 8761
+3. Added eureka-client dependency to all the microservices
+4. Added @EnableEurekaClient to all the services
+5. Checked localhost:8761 on browser
+
+Service Discovery :
+--------------------
+
+1. Add @LoadBalanced annotation to RestTemplate Bean (OrderService)
+2. Replace the urls [localhost:xxxx] with the service names
+e.g
+COUPON_SERVICE_URL=http://COUPON-SERVICE/coupons/
+PRODUCT_SERVICE_URL=http://PRODUCT-SERVICE/products/
+
+```
 
 
 
