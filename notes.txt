@@ -1,0 +1,54 @@
+
+
+coupon-service
+
+
+product-service
+
+
+order-service
+
+
+Service Registration :
+----------------------
+1. Created an Eureka-Server
+2. Start the server on port 8761
+3. Added eureka-client dependency to all the microservices
+4. Added @EnableEurekaClient to all the services
+5. Checked localhost:8761 on browser
+
+Service Discovery :
+--------------------
+
+1. Add @LoadBalanced annotation to RestTemplate Bean (OrderService)
+2. Replace the urls [localhost:xxxx] with the service names
+e.g
+COUPON_SERVICE_URL=http://COUPON-SERVICE/coupons/
+PRODUCT_SERVICE_URL=http://PRODUCT-SERVICE/products/
+
+
+
+API Gateway
+--------------
+localhost:8888/products/p101
+
+localhost:8888/orders/product/p102/coupon/c001
+
+localhost:8888/coupons/c001
+
+
+Circuit Breaker Pattern
+-----------------------
+
+
+1. Close State - Everything is fine
+
+2. Open State -
+
+3. Half Open State - 
+
+
+
+
+
+
