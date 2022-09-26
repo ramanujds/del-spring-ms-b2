@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: api-gateway
+    
+  cloud:
+    gateway:
+      routes:
+        - id: order-service
+          uri:
+            lb://ORDER-SERVICE
+          predicates:
+          - Path=/orders/**
+          
+        - id: product-service
+          uri:
+            lb://PRODUCT-SERVICE
+          predicates:
+          - Path=/products/**
+          
+        - id: coupon-service
+          uri:
+            lb://COUPON-SERVICE
+          predicates:
+          - Path=/coupons/**
+  
+server:
+  port: 8888
