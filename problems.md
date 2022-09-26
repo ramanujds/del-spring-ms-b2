@@ -84,3 +84,29 @@ Create enums for status and category
 use @Enumerated for fields of enum types
 
 ```
+
+
+## Microservices Exercise
+
+```text
+
+Create Two Microservices
+-------------------------
+
+Product Info Service
+
+GET: to find product
+
+POST: to add product
+
+PUT : to add product to favorate
+
+
+Favorite Service
+
+GET: find all the favorate products
+
+POST: add a new favorate product
+
+
+```
