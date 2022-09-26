@@ -298,11 +298,31 @@ PRODUCT_SERVICE_URL=http://PRODUCT-SERVICE/products/
 
 ```
 
+## Dependencies for Circuit Breaker
+------------------------------------
+
+```xml
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>io.github.resilience4j</groupId>
+			<artifactId>resilience4j-spring-boot2</artifactId>
+			<version>1.7.1</version>
+		</dependency>
+		
+			<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
 
 
 
 
-
+```
 
 
 
