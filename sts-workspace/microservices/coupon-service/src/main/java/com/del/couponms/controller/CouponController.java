@@ -20,13 +20,7 @@ public class CouponController {
 
 	@GetMapping("/{couponCode}")
 	public Coupon getCoupon(@PathVariable String couponCode) {
-		try {
-		int x=2/0;
-		}
-		catch (Exception e) {
-			System.err.println(e);
-			throw new ArithmeticException();
-		}
+		
 		return service.getCoupon(couponCode);
 	}
 	
