@@ -54,6 +54,13 @@ public class OrderServiceImpl implements OrderService {
 		return restClient.getForObject(COUPON_SERVICE_URL + couponCode, Coupon.class);
 	}
 	
+	@Override
+	public Product addProduct(Product product) {
+		
+		return restClient.postForObject(PRODUCT_SERVICE_URL, product, Product.class);
+		
+	}
+	
 	
 
 	
