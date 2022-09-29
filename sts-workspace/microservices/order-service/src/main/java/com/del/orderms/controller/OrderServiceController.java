@@ -1,5 +1,7 @@
 package com.del.orderms.controller;
 
+import java.time.LocalDateTime;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -41,7 +43,8 @@ public class OrderServiceController {
 		c1.setDiscount(1);
 		c1.setMinOderValue(1);
 		System.err.println(ex);
-		return new OrderDetails(p1, c1, 0);
+		LocalDateTime time = LocalDateTime.now();
+		return new OrderDetails(p1, c1, 0,time);
 
 	}
 }

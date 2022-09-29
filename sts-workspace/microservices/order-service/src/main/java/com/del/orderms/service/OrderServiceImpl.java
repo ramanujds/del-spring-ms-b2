@@ -1,5 +1,7 @@
 package com.del.orderms.service;
 
+import java.time.LocalDateTime;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -37,7 +39,8 @@ public class OrderServiceImpl implements OrderService {
 			price = price - price * (discount / 100.0f);
 		}
 
-		OrderDetails order = new OrderDetails(product, coupon, price);
+		LocalDateTime time = LocalDateTime.now();
+		OrderDetails order = new OrderDetails(product, coupon, price, time);
 		return order;
 
 	}

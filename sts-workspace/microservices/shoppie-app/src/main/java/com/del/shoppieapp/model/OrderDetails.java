@@ -1,5 +1,7 @@
 package com.del.shoppieapp.model;
 
+import java.time.LocalDateTime;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,6 +16,8 @@ public class OrderDetails {
 	private Coupon coupon;
 	
 	private float finalPrice;
+	
+	LocalDateTime time;
 	
 	
 
